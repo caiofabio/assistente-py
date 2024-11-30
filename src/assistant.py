@@ -6,7 +6,7 @@ import speech_recognition as sr
 from datetime import datetime
 
 # Configurar o logger
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='assistente.log', filemode='w', encoding='utf-8')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='../log/assistente.log', filemode='w', encoding='utf-8')
 
 def speak(text):
     tts = gTTS(text=text, lang='pt')
