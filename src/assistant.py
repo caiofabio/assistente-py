@@ -4,9 +4,11 @@ import playsound
 import os
 import speech_recognition as sr
 from datetime import datetime
+from config import LOG_DIR
 
-# Configurar o logger
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='../log/assistente.log', filemode='w', encoding='utf-8')
+
+# Configurar o logger {LOG_DIR}
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename=LOG_DIR, filemode='w', encoding='utf-8')
 
 def speak(text):
     tts = gTTS(text=text, lang='pt')
